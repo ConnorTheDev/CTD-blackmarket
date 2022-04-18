@@ -11,7 +11,7 @@ AddEventHandler('QBCore:Client:OnGangUpdate', function(GangInfo)
   PlayerGang = GangInfo
 end)
 
-AddEventHandler('onResourceStart', function(resource)--test
+AddEventHandler('onResourceStart', function(resource)
    if resource == GetCurrentResourceName() then
       Wait(100)
       PlayerGang = QBCore.Functions.GetPlayerData().gang
