@@ -1,7 +1,7 @@
 QBCore = exports['qb-core']:GetCoreObject()
 local PlayerGang = {}
 
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded') --testing
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded') --test
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
   PlayerGang = QBCore.Functions.GetPlayerData().gang
 end)
