@@ -38,7 +38,7 @@ Config.Products = {
             amount = 500,
             info = {},
             type = "item",
-            slot = 1,
+            slot = 2,
         },
     }
 }
@@ -50,7 +50,8 @@ Config.blackmarkets = {
             [1] = vector4(963.69, -118.76, 73.35, 217.44) --coords for the ped
         },
         ["products"] = Config.Products["SOA"],
-        gang = "lostmc" -- change this to the gang you wanna use. has to be in the gangs.lua
+        gang = "lostmc", -- change this to the gang you wanna use. has to be in the gangs.lua
+        model = "ig_ashley" --change this for the model you want.
     },
     ["BallarMarket"] = {
         ["label"] = "Baller Market",
@@ -58,6 +59,7 @@ Config.blackmarkets = {
             [1] = vector4(211.02, -779.5, 30.03, 253.19)
         },
         ["products"] = Config.Products["Baller"],
-        gang = "ballars"
+        gang = "ballars",
+        model = "a_m_y_acult_01"
     },
 }

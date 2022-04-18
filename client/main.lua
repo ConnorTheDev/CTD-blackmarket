@@ -20,7 +20,9 @@ end)
 
 Citizen.CreateThread(function()
   if Config.UsingTarget then
-    exports['qb-target']:AddTargetModel("a_m_o_acult_02", {
+    for shop, _ in pairs(Config.blackmarkets) do
+    local model = Config.blackmarkets[shop].model
+    exports['qb-target']:AddTargetModel(model, {
       options = {
           {
               event = "CTD-blackmaket:Target",
@@ -30,6 +32,7 @@ Citizen.CreateThread(function()
       },
   distance = 1.0 
   })
+end
 else
   while true do
     Wait(0)
@@ -69,16 +72,17 @@ end)
 Citizen.CreateThread(function() --create ped
   for shop, _ in pairs(Config.blackmarkets) do
   local position = Config.blackmarkets[shop]["coords"]
+  local model = Config.blackmarkets[shop].model
   for _, loc in pairs(position) do
         if not DoesEntityExist(dealer) then
-        RequestModel('a_m_o_acult_02')
-        while not HasModelLoaded('a_m_o_acult_02') do
+        RequestModel(model)
+        while not HasModelLoaded(model) do
             Wait(10)
         end
-        local dealer = CreatePed(26, 'a_m_o_acult_02', loc["x"], loc["y"], loc["z"], loc["w"], false, false)
+        local dealer = CreatePed(26, model, loc["x"], loc["y"], loc["z"], loc["w"], false, false)
         SetEntityHeading(dealer, loc["w"])
         SetBlockingOfNonTemporaryEvents(dealer, true)
-        TaskStartScenarioInPlace(dealer, 'WORLD_HUMAN_AA_SMOKE', 0, false)
+        TaskStartScenarioInPlace(dealer, model, 0, false)
         FreezeEntityPosition(dealer, true)
         SetEntityInvincible(dealer, true)
       end
