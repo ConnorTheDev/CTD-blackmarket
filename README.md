@@ -2,8 +2,10 @@
 
 Blackmarket system thats made for gangs!
 
+Discord link: https://discord.gg/EfZBvtpefB
+
 Config option for qb-target.
 
-Hope you enjoy and as always thanks to all who support me!
+Config option for changing the ped at each black market.
 
-Discord link: https://discord.gg/EfZBvtpefB
+Hope you enjoy and as always thanks to all who support me!
