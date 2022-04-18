@@ -2,8 +2,6 @@ Config = {}
 
 Config.UsingTarget = true
 
---Config.Testing = vector3(249.11, -790.34, 29.43)
-
 Config.Products = {
     ["SOA"] = {
         [1] = {
